@@ -1,0 +1,639 @@
+<% /* 基础组件 */%>
+
+<ul class="nav nav-list accordion-group">
+    <li class="nav-header">
+        <i class="glyphicon glyphicon-plus"></i>
+        工具组件
+        <div class="pull-right popover-info">
+            <i class="glyphicon glyphicon-question-sign "></i>
+
+            <div class="popover fade right">
+                <div class="arrow"></div>
+                <h3 class="popover-title">帮助</h3>
+
+                <div class="popover-content">
+                    将组件元素拖放入你需要放入的栅格列中。之后，你可以设置该组件的样式。如果你需要了解更多内容，请访问
+                    <a target="_blank" href="http://v3.bootcss.com/components/">工具组件.</a>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="boxes" id="elmComponents">
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+							<span class="configuration">
+								<span class="btn-group btn-group-xs">
+									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                        尺寸
+                                        <span class="caret"></span>
+                                    </a>
+									<ul class="dropdown-menu">
+                                        <li class="active">
+                                            <a href="#" rel="">默认</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="btn-group-lg">大</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="btn-group-md">中</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="btn-group-sm">小</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="btn-group-xs">微型</a>
+                                        </li>
+                                    </ul>
+								</span>
+								<a class="btn btn-xs btn-default" href="#" rel="btn-group-vertical">竖向</a>
+							</span>
+
+            <div class="preview">按钮组</div>
+            <div class="view">
+                <div class="btn-group">
+                    <button class="btn btn-default" type="button">
+                        <i class="glyphicon glyphicon-align-left"></i>
+                        左
+                    </button>
+                    <button class="btn btn-default" type="button">
+                        <i class="glyphicon glyphicon-align-center"></i>
+                        中
+                    </button>
+                    <button class="btn btn-default" type="button">
+                        <i class="glyphicon glyphicon-align-right"></i>
+                        右
+                    </button>
+                    <button class="btn btn-default" type="button">
+                        <i class="glyphicon glyphicon-align-justify"></i>
+                        全
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+							<span class="configuration">
+								<a class="btn btn-xs btn-default" href="#" rel="dropup">朝向</a>
+							</span>
+
+            <div class="preview">下拉菜单</div>
+            <div class="view">
+                <div class="btn-group">
+                    <button class="btn btn-default" contenteditable="true">Action</button>
+                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" contenteditable="true">
+                        <li>
+                            <a href="#">操作</a>
+                        </li>
+                        <li class="disabled">
+                            <a href="#">另一操作</a>
+                        </li>
+                        <li class="divider"><br></li>
+                        <li>
+                            <a href="#">其它</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+							<span class="configuration">
+								<span class="btn-group btn-group-xs">
+									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                        样式
+                                        <span class="caret"></span>
+                                    </a>
+									<ul class="dropdown-menu">
+                                        <li class="">
+                                            <a href="#" rel="nav-tabs">默认</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="nav-pills">线框</a>
+                                        </li>
+                                    </ul>
+								</span>
+								<a class="btn btn-xs btn-default" href="#" rel="nav-stacked">切换格式</a>
+							</span>
+
+            <div class="preview">导航</div>
+            <div class="view">
+                <ul class="nav nav-tabs" contenteditable="true">
+                    <li class="active">
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">简介</a>
+                    </li>
+                    <li class="disabled">
+                        <a href="#">信息</a>
+                    </li>
+                    <li class="dropdown pull-right">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            下拉 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">操作</a>
+                            </li>
+                            <li>
+                                <a href="#">设置栏目</a>
+                            </li>
+                            <li>
+                                <a href="#">更多设置</a>
+                            </li>
+                            <li class="divider"><br></li>
+                            <li>
+                                <a href="#">分割线</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+
+            <div class="preview">路径导航</div>
+            <div class="view">
+
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#" contenteditable="true">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" contenteditable="true">Library</a>
+                    </li>
+                    <li class="active" contenteditable="true">Data</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+							<span class="configuration">
+								<span class="btn-group btn-group-xs">
+									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                        尺寸
+                                        <span class="caret"></span>
+                                    </a>
+									<ul class="dropdown-menu">
+                                        <li class="">
+                                            <a href="#" rel="pagination-lg">大</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#" rel="">众</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="pagination-sm">小</a>
+                                        </li>
+                                    </ul>
+								</span>
+
+							</span>
+
+            <div class="preview">分页</div>
+            <div class="view">
+                <ul class="pagination" contenteditable="true">
+                    <li>
+                        <a href="#">Prev</a>
+                    </li>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">Next</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+							<span class="configuration">
+								<span class="btn-group btn-group-xs">
+									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                        样式
+                                        <span class="caret"></span>
+                                    </a>
+									<ul class="dropdown-menu">
+                                        <li class="">
+                                            <a href="#" rel="label-default">Default</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="label-primary">Primary</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="label-success">Success</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="label-info">Info</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="label-warning">Warning</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="label-danger">Danger</a>
+                                        </li>
+                                    </ul>
+								</span>
+							</span>
+
+            <div class="preview">标签</div>
+            <div class="view">
+                <span class="label label-default" contenteditable="true">标签</span>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+            <span class="configuration"></span>
+
+            <div class="preview">徽章</div>
+            <div class="view">
+                <ul class="nav nav-pills" contenteditable="true">
+                    <li class="active">
+                        <a href="#">
+                            <span class="badge pull-right">42</span>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="badge pull-right">16</span>
+                            More
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+							<span class="configuration">
+								<a class="btn btn-xs btn-default" href="#" rel="well">Well</a>
+							</span>
+
+            <div class="preview">巨幕</div>
+            <div class="view">
+                <div class="jumbotron" contenteditable="true">
+                    <h1>Hello, world!</h1>
+
+                    <p>
+                        This is a template for a simple marketing or informational
+                        website. It includes a large callout called the hero unit and three
+                        supporting pieces of content. Use it as a starting point to create
+                        something more unique.
+                    </p>
+
+                    <p>
+                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+
+            <div class="preview">页头</div>
+            <div class="view">
+                <div class="page-header">
+                    <h1 contenteditable="true">
+                        Example page header
+                        <small>Subtext for header</small>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+
+            <div class="preview">文本</div>
+            <div class="view">
+                <h2 contenteditable="true">Heading</h2>
+
+                <p contenteditable="true">
+                    Donec id elit non mi porta gravida at eget metus. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                    fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+                    mollis euismod. Donec sed odio dui.
+                </p>
+
+                <p>
+                    <a class="btn" href="#" contenteditable="true">View details »</a>
+                </p>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+
+            <div class="preview">缩略图</div>
+            <div class="view">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img alt="300x200"
+                                 src="imgs/default_006.jpg">
+
+                            <div class="caption" contenteditable="true">
+                                <h3>Thumbnail label</h3>
+
+                                <p>
+                                    Cras justo odio, dapibus ac facilisis in, egestas eget
+                                    quam. Donec id elit non mi porta gravida at eget metus. Nullam id
+                                    dolor
+                                    id nibh ultricies vehicula ut id elit.
+                                </p>
+
+                                <p>
+                                    <a class="btn btn-primary" href="#">Action</a>
+                                    <a class="btn" href="#">Action</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img alt="300x200"
+                                 src="imgs/default.jpg">
+
+                            <div class="caption" contenteditable="true">
+                                <h3>Thumbnail label</h3>
+
+                                <p>
+                                    Cras justo odio, dapibus ac facilisis in, egestas eget
+                                    quam. Donec id elit non mi porta gravida at eget metus. Nullam id
+                                    dolor
+                                    id nibh ultricies vehicula ut id elit.
+                                </p>
+
+                                <p>
+                                    <a class="btn btn-primary" href="#">Action</a>
+                                    <a class="btn" href="#">Action</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img alt="300x200"
+                                 src="imgs/default_007.jpg">
+
+                            <div class="caption" contenteditable="true">
+                                <h3>Thumbnail label</h3>
+
+                                <p>
+                                    Cras justo odio, dapibus ac facilisis in, egestas eget
+                                    quam. Donec id elit non mi porta gravida at eget metus. Nullam id
+                                    dolor
+                                    id nibh ultricies vehicula ut id elit.
+                                </p>
+
+                                <p>
+                                    <a class="btn btn-primary" href="#">Action</a>
+                                    <a class="btn" href="#">Action</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+
+							<span class="configuration">
+
+								<a class="btn btn-xs btn-default" href="#" rel="progress-striped">条纹</a>
+								<a class="btn btn-xs btn-default" href="#" rel="active">动画</a>
+							</span>
+
+            <div class="preview">进度条</div>
+            <div class="view">
+                <div class="progress">
+                    <div class="progress-bar progress-success" style="width: 60%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+							<span class="configuration">
+								<a class="btn btn-xs btn-default" href="#" rel="well">嵌入</a>
+							</span>
+
+            <div class="preview">媒体</div>
+            <div class="view">
+                <div class="media">
+                    <a href="#" class="pull-left">
+                        <img src="imgs/default_002.jpg"
+                             class="media-object"></a>
+
+                    <div class="media-body" contenteditable="true">
+                        <h4 class="media-heading">Nested media heading</h4>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                        scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in
+                        vulputate at, tempus viverra turpis.
+                        <div class="media">
+                            <a href="#" class="pull-left">
+                                <img src="imgs/default_002.jpg"
+                                     class="media-object"></a>
+
+                            <div class="media-body" contenteditable="true">
+                                <h4 class="media-heading">Nested media heading</h4>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in
+                                vulputate at, tempus viverra turpis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+            <span class="configuration"></span>
+
+            <div class="preview">列表组</div>
+            <div class="view">
+                <div class="list-group" contenteditable="true">
+                    <a href="#" class="list-group-item active">Home</a>
+
+                    <div class="list-group-item">List header</div>
+                    <div class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+
+                        <p class="list-group-item-text">...</p>
+                    </div>
+                    <div class="list-group-item">
+                        <span class="badge">14</span>
+                        Help
+                    </div>
+                    <a class="list-group-item active">
+                        <span class="badge">14</span>
+                        Help
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                删除
+            </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								拖动
+							</span>
+							<span class="configuration">
+								<span class="btn-group btn-group-xs">
+									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                        样式
+                                        <span class="caret"></span>
+                                    </a>
+									<ul class="dropdown-menu">
+                                        <li class="">
+                                            <a href="#" rel="panel-default">Default</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="panel-primary">Primary</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="panel-success">Success</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="panel-info">Info</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="panel-warning">Warning</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" rel="panel-danger">Danger</a>
+                                        </li>
+                                    </ul>
+								</span>
+
+							</span>
+
+            <div class="preview">面板</div>
+            <div class="view">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" contenteditable="true">Panel title</h3>
+                    </div>
+                    <div class="panel-body" contenteditable="true">Panel content</div>
+                    <div class="panel-footer" contenteditable="true">Panel footer</div>
+                </div>
+            </div>
+        </div>
+
+    </li>
+</ul>

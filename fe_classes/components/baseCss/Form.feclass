@@ -1,0 +1,21 @@
+/**
+ * Created by chenjianhui on 16/4/30.
+ */
+var baseDir = __dirname;
+var BaseModule = require(baseDir + "/../../base/Module.feclass");
+var StyleClassMap = require(baseDir + "/../../utils/style/StyleClassMap.feclass");
+
+var Form = BaseModule.extend({
+    name_cn:"表单",//模块名字
+    name_en:"Form", //英文模块名
+    mType:"baseCss",
+    deps:{
+        css:null,//加载css依赖
+        js:null//
+    }, // 依赖
+    oprate:[StyleClassMap.textAlign,StyleClassMap.textMark], //可对其进行的属性操作
+    digest:"表单",//模块简介
+    view:"Form" //模块视图
+});
+
+module.exports = Form;

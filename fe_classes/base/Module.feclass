@@ -1,0 +1,25 @@
+/**
+ * Created by chenjianhui on 16/4/28.
+ */
+var Class = require("./Class.feclass"),
+    viewBasePath = __dirname+"/../coponents_view/",
+    viewExt = ".view",
+    fSManage = require(__dirname + "/../utils/fs/FSManage.feclass");
+
+var BaseModule = Class.extend({
+    init:function(){
+        this.loadView();
+    },
+    name_cn:"module",//模块名字
+    name_en:"", //英文模块名
+    mType:"",//module类型
+    deps:{}, // 依赖
+    oprate:[], //可对其进行的属性操作
+    digest:"this is base",//模块简介
+    view:"",//模块视图
+    loadView:function(){
+        var viewPath = viewBasePath+this.mType+"/"+this.name_en+viewExt;
+        this.view = fSManage.readFile(viewPath);
+    }
+})
+module.exports = BaseModule;

@@ -1,0 +1,22 @@
+/**
+ * Created by chenjianhui on 16/4/28.
+ */
+
+var baseDir = __dirname;
+var BaseModule = require(baseDir + "/../base/Module.feclass");
+var StyleClassMap = require(baseDir + "/../utils/style/StyleClassMap.feclass");
+
+var TestModule = BaseModule.extend({
+    name_cn:"TextModule",//模块名字
+    name_en:"TextModule", //英文模块名
+    mType:"baseCss",
+    deps:{
+        css:["css/"],//加载css依赖
+        js:["lib/"]//
+    }, // 依赖
+    oprate:[StyleClassMap.btnSize], //可对其进行的属性操作
+    digest:"this is base",//模块简介
+    view:"<input type='button' value='TextModule' class='btn'/>" //模块视图
+});
+
+module.exports = new TestModule();

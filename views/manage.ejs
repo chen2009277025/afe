@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>KUI-AFE - 基于KUI可视化布局系统</title>
+    <meta name="keywords" content="bootstrap,ibootstrap,可视化,操作,布局">
+    <meta name="description" content="KUI-AFE! 可拖放排序在线编辑的KUI可视化布局系统">
+
+    <!-- Le styles -->
+    <!--<link href="js/lib/bootstrap/dist/css/bootstrap.css" rel="style">-->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/thirdPart.css" rel="stylesheet">
+    <link href="/css/afeStyle.css" rel="stylesheet">
+    <link href="/css/zTreeStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="/js/lib/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="/js/lib/codemirror/addon/hint/show-hint.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--<script src="js/lib/jquery/dist/jquery.min.js"></script>-->
+
+    <!--<script src="js/lib/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <!--<script src="js/scripts_bak.js"></script>-->
+    <script src="js/lib/r.js"></script>
+
+    <script src="js/main.js"></script>
+    <!--<script src="js/lib/kangarooui.min.js"></script>-->
+</head>
+
+<body style="min-height: 824px;" class="devcodeview">
+<div id="wrapper" class="kangaroo-default">
+    <input type="hidden" id="projectName" value="<%= projectName %>">
+
+    <!--顶部工具条-->
+    <% include part/topToolBar.ejs %>
+
+    <div class="container afe-container">
+        <!--左侧工具栏-->
+        <% include part/leftNav.ejs %>
+
+        <!--编辑区域-->
+        <div style="min-height: 754px;" class="editor ui-sortable afe-operate-area">
+        </div>
+
+        <!--代码区域-->
+        <div style="min-height: 754px;" class="afe-developer afe-operate-area">
+            <ul class="nav nav-tabs" role="tablist" id="afe-tabList">
+            </ul>
+            <div class="tab-content" id="afe-tabContent">
+            </div>
+            <!--预览界面-->
+            <!--<p><button class="btn btn-default btn-preview-refresh"><i class="glyphicon glyphicon-refresh"></i></button> </p>-->
+            <iframe id="afeCodePreview"></iframe>
+        </div>
+
+        <div id="download-layout">
+
+        </div>
+
+        <!--右侧的工程目录-->
+        <div class="projectwindow">
+            <div class="text-left">
+                <i class="glyphicon glyphicon-menu-right projectWindowBtn"></i>
+            </div>
+            <ul id="projectTree" class="ztree"></ul>
+        </div>
+
+    </div>
+    <!--/.fluid-container-->
+
+    <!--工程目录右键菜单-->
+    <div class="mouse-menu">
+        <ul>
+            <li class="menu-item" data-menurole="newfile">新建文件</li>
+            <li class="menu-item" data-menurole="newdir">新建文件夹</li>
+            <li class="menu-item" data-menurole="rename">重命名</li>
+            <li class="menu-item" data-menurole="del">删除</li>
+        </ul>
+    </div>
+
+    <!--文件操作右键菜单-->
+    <ul class="contextMenu">
+        <li class="menu-save-btn">保存</li>
+        <li class="menu-close-btn">关闭</li>
+    </ul>
+
+    <!--新建文件模态框-->
+    <% include part/createFileModal.ejs %>
+
+    <!--新建文件夹模态框-->
+    <% include part/createDirModal.ejs %>
+
+    <!--重命名模态框-->
+    <% include part/renameModal.ejs %>
+
+    <!--下载模态框-->
+    <% include part/downloadModal.ejs %>
+
+    <!--帮助模态框-->
+    <% include part/helperModal.ejs %>
+
+    <!--确认模态框-->
+    <% include part/confirmModal.ejs %>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- Button to trigger modal -->
+<a id="afeModalLink" href="#afeModalContainer" role="button" class="btn"
+   data-toggle="modal">触发遮罩窗体</a>
+        <!-- Modal -->
+<div class="modal fade" id="afeModalContainer" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel"
+     aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+                    aria-hidden="true">×
+            </button>
+            <h4 class="modal-title" id="afeModalLabel" contenteditable="true">标题</h4>
+        </div>
+        <div class="modal-body" contenteditable="true">内容...</div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal"
+                    contenteditable="true">关闭
+            </button>
+            <button type="button" class="btn btn-primary" contenteditable="true">
+                保存
+            </button>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

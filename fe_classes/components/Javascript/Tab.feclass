@@ -1,0 +1,21 @@
+/**
+ * Created by chenjianhui on 16/5/2.
+ */
+var baseDir = __dirname;
+var BaseModule = require(baseDir + "/../../base/Module.feclass");
+var StyleClassMap = require(baseDir + "/../../utils/style/StyleClassMap.feclass");
+
+var Tab = BaseModule.extend({
+    name_cn:"选项卡",//模块名字
+    name_en:"Tab", //英文模块名
+    mType:"javascript",
+    deps:{
+        css:null,//加载css依赖
+        js:null//
+    }, // 依赖
+    oprate:[], //可对其进行的属性操作
+    digest:"选项卡",//模块简介
+    view:"Tab" //模块视图
+});
+
+module.exports = Tab;

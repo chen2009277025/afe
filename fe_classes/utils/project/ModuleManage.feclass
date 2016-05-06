@@ -1,0 +1,45 @@
+/**
+ * Created by chenjianhui on 16/4/30.
+ *
+ * modulemanage 主要功能:
+ * 1.读取配置文件中对外开放的module,将module对应的view读取出来拼装起来一起输送给express
+ * 2.后期可能会改成从数据库中读取对外开放的module配置
+ *
+ */
+const fs = require('fs');
+
+var baseDir = __dirname,
+    setting = require(baseDir + "/../../../setting/setting"),
+    Class = require(baseDir + "/../../base/Class.feclass"),
+    workspaceDir = setting.workspace,
+    moduleBaseDir =  baseDir+ "/../../components/",
+    moduleViewBaseDir = baseDir+ "/../../coponents_view/",
+    moduleExt = ".feclass",
+    moduleViewExt = ".view";
+
+var ModuleManage = Class.extend({
+        /***
+         * 读取所有对外开放的module
+         * 思路:
+         * 1.从setting配置中读取出对外开放的module
+         * @returns {{}}
+         */
+        getAllModule: function () {
+            var moduleOutput = setting.moduleOutPut,
+                modules = [];
+            if (moduleOutput == null || moduleOutput.length <= 0) {
+                return modules;
+            }
+            moduleOutput.forEach(function (moduleName) {
+                (function(moduleName){
+                    console.log(moduleBaseDir + moduleName + moduleExt);
+                    var module = require(moduleBaseDir + moduleName + moduleExt);
+                   // module.view = fSManage.readFile(moduleViewBaseDir + moduleName + moduleViewExt);
+                    modules.push(module);
+                })(moduleName);
+            })
+            return modules;
+        }
+    });
+
+module.exports = new ModuleManage();

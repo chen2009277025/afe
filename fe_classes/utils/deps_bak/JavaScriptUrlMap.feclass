@@ -1,0 +1,16 @@
+/**
+ * Created by chenjianhui on 16/4/30.
+ * 该文件不要乱动
+ */
+
+var setting = __dirname + "/../../../setting/setting";
+
+var librarypath = setting.projectDir+"/baseProject/js/";
+
+var JavaScriptUrlMap = {
+    "require":librarypath+"/lib/r.js",//require
+    "jquery":librarypath+"/lib/jquery.js",//jq
+    "kangarooui":librarypath +"/lib/kangarooui.min.js"//kui js
+}
+
+module.exports = JavaScriptUrlMap;

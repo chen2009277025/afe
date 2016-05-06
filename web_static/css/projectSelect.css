@@ -1,0 +1,141 @@
+#main-container{
+    margin-left: 0px;
+}
+
+.projects-div{
+    background: #cceefa;
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.navbar-brand{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-afe .navbar-brand {
+    width: 180px;
+    color: #fff;
+}
+
+.navbar-afe .navbar-brand img {
+    float: left;
+    margin: 10px 10px 0 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-afe .navbar-brand .label {
+    position: relative;
+    left: 10px;
+    top: -3px;
+    font-weight: normal;
+    font-size: 9px;
+    background: #666;
+    -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-afe .navbar-brand {
+    width: 180px;
+    color: #fff;
+}
+
+.navbar-afe .btn-donate {
+    padding: 0 0 0 10px;
+}
+
+.navbar-afe .btn-donate form {
+    margin: 0;
+}
+
+.navbar-afe .navbar-brand {
+    height: 50px;
+    line-height: 50px;
+}
+
+.search-area{
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+.searchInput,.projectNameInput{
+    width: 220px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #2a2a2a;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.hisProjectList{
+    height: 350px;
+    width: 200px;
+    float: left;
+    padding: 10px;
+}
+
+.createProject{
+    height: 150px;
+    width: 350px;
+    float: left;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.createProject-inputs{
+    display: none;
+}
+
+.hisProjectList p {
+    border-bottom: 1px solid #fff;
+}
+
+.hisProjectList ul{
+    list-style: none;
+}
+
+.hisProjectList ul li{
+    padding: 5px 20px;
+    border-bottom: 1px solid #fff;
+    background-color: #fef9ea;
+}
+
+.hisProjectList ul li:hover{
+    background-color:#ffdede;
+}
+
+#top-nav {
+    height: 50px;
+    padding-right: 10px;
+    white-space: nowrap;
+    min-width: 310px;
+}
+
+#top-nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.kangaroo-default #top-nav {
+    background-color: #00abe4;
+}

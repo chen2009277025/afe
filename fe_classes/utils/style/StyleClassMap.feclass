@@ -1,0 +1,58 @@
+/**
+ * Created by chenjianhui on 16/4/29.
+ *
+ * 样式操作对应的css Class
+ *
+ */
+
+var baseDir = __dirname;
+
+var StyleClassMap = {
+    textAlign: {
+        text: "对齐方式",val: [{"text": "居左", val: "text-left"},{"text": "居右", val: "text-right"},{text: "居中", val: "text-center"}]
+    },
+    textMark:{
+        text:"文本标记",val:[{text:"禁用",val:"text-muted"},{text:"警告",val:"text-warning"}, {text: "错误", val: "text-danger"},{text:"提示",val:"text-info"},{text:"成功",val:"text-success"}]
+    },
+    nodeAlign:{
+        text:"节点对齐",val:[{text:"居右",val:"pull-right"},{text:"居左",val:"pull-left"}]
+    },
+    listStyle:{
+        text:"列表模式",val:[{text:"嵌入",val:"list-inline"},{text:"分组",val:"list-group"},{text:"无样式",val:"list-unstyled"}]
+    },
+    tableBorder:{
+        text:"表格样式",val:[{text:"",val:""},{text:"条纹",val:"table-striped"},{text:"边框",val:"table-bordered"}]
+    },
+    tableHover:{
+        text:"奇偶交互",val:"table-hover"
+    },
+    tableStyle:{
+        text:"紧凑型",val:"table-condensed"
+    },
+    formStyle:{
+        text:"表格模式",val:[{text:"嵌入",val:"form-inline"}]
+    },
+    btnStyle:{
+        text:"按钮样式",val:[{text:"默认",val:"btn-default"},{text:"原生",val:"btn-primary"},{text:"信息",val:"btn-info"},{text:"成功",val:"btn-success"},{text:"提醒",val:"btn-warning"},{text:"危险",val:"btn-danger"},{text:"链接",val:"btn-link"}]
+    },
+    btnSize:{
+        text:"按钮大小",val:[{text:"大",val:"btn-lg"},{text:"小",val:"btn-sm"},{text:"微型",val:"btn-xs"}]
+    },
+    btnBlock:{
+        text:"按钮通栏",val:"btn-block"
+    },
+    status:{
+        text:"状态",val:[{text:"默认",val:""},{text:"激活",val:"active"},{text:"禁用",val:"disabled"}]
+    },
+    imgBorderRadiusStyle:{
+        text:"圆角样式",val:[{text:"默认",val:""},{text:"圆角",val:"img-rounded"},{text:"圆圈",val:"img-circle"},{text:"相框",val:"img-thumbnail"}]
+    },
+    btnGroupSize:{
+        text:"按钮组属性",val:[{text:"默认",val:""},{text:"大",val:"btn-group-lg"},{text:"中",val:"btn-group-md"},{text:"小",val:"btn-group-sm"},{text:"小",val:"btn-group-xs"}]
+    },
+    btnGroupVerticle:{
+        text:"按钮组排列",val:[{text:"竖向",val:"btn-group-vertical"},{text:"横向",val:"btn-group-horizon"}]
+    }
+};
+
+module.exports = StyleClassMap;

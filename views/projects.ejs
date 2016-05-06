@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>KUI-AFE - 基于KUI可视化布局系统</title>
+    <meta name="keywords" content="bootstrap,ibootstrap,可视化,操作,布局">
+    <meta name="description" content="KUI-AFE! 可拖放排序在线编辑的KUI可视化布局系统">
+    <title></title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/thirdPart.css" rel="stylesheet">
+    <link href="/css/projectSelect.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper" class="kangaroo-default">
+
+    <div id="top-nav" class="fixed navbar-afe">
+
+        <div class="navbar-header">
+            <button data-target="navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="glyphicon-bar"></span>
+                <span class="glyphicon-bar"></span>
+                <span class="glyphicon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="imgs/favicon.png">
+                KUI-AFE
+                <span class="label label-default">BETA</span>
+            </a>
+        </div>
+
+        <div class="pull-right header-info">
+            <div class="user-info-wrapper pull-left">
+                <a href="javascript:;" class="user-info-content pull-left refresh-access">
+            <span class="info-content">
+              <i class="fa"></i>
+              <span class="info-text">更新权限</span>
+            </span>
+                </a>
+                <a href="javascript:;" class="user-info-content pull-left">
+                    <span class="v-line"></span>
+            <span class="info-content">
+              <i class="fa fa-custom-user"></i>
+              <span class="info-text user">陈建辉</span>
+            </span>
+                </a>
+                <a href="" class="user-info-content pull-left">
+                    <span class="v-line"></span>
+            <span class="info-content">
+              <i class="fa fa-power-off"></i>
+              <span class="info-text">退出</span>
+            </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="nav-tip" class="hide">
+        <div class="modal-backdrop">
+            <div class="menu-tip">
+                <div class="tip-close"></div>
+                <div class="tip-know">知道了</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container" class="">
+        <div id="main-content">
+            <div class="projects-div">
+                    <div class="search-area">
+                        <input class="searchInput">
+                        <input type="button" class="btn btn-md btn-success btn-search" value="搜索">
+                        <input type="button" class="btn btn-md btn-success createBtn" value="Create Project">
+                    </div>
+                <div>
+                    <div class="hisProjectList">
+                        <p>最近打开的项目:</p>
+                        <ul>
+                            <li>项目1</li>
+                            <li>项目1</li>
+                            <li>项目1</li>
+                            <li>项目1</li>
+                        </ul>
+                    </div>
+                    <div class="createProject">
+                        <div class="createProject-inputs">
+                            <input class="projectNameInput">
+                            <input type="button" class="btn btn-md btn-success btn-submit" value="新建">
+                            <input type="button" class="btn btn-md btn-default btn-cancle" value="取消">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="js/lib/r.js"></script>
+<script src="js/project.js"></script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<div id="modules"></div>
+<% modules.forEach(function(model){ %>
+    <% model.oprate.forEach(function(o){%>
+        <%=o.text%>
+        <% if(typeof o.val == "string"){%>
+            <a href="#">o.text</a>
+        <%}else{%>
+            <select>
+            <% o.val.forEach(function(v){%>
+                <option value="<%=v.val%>"><%=v.text%></option>
+            <%})%>
+            </select>
+        <%}%>
+    <%}) %>
+    <%-model.view %>
+<% }) %>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/kangarooui.min.js"></script>
+<link href="/css/kangarooui.min.css" rel="stylesheet">
+<script src="/js/lib/r.js"></script>
+<script src="/js/fe-conponent/core/Class.js"></script>
+<script>
+    require.config({
+        baseUrl: '/js',
+        shim: {
+            'lib/jquery-ui': {
+                deps: ['lib/jquery']
+            },
+            'lib/jquery.htmlClean': {
+                deps: ['lib/jquery']
+            }
+        }
+    });
+</script>
+<script src="/js/page/test/test.js"></script>
+</html>

@@ -1,0 +1,21 @@
+/**
+ * Created by chenjianhui on 16/4/30.
+ */
+var baseDir = __dirname;
+var BaseModule = require(baseDir + "/../../base/Module.feclass");
+var StyleClassMap = require(baseDir + "/../../utils/style/StyleClassMap.feclass");
+
+var Dropdown = BaseModule.extend({
+    name_cn:"下拉菜单",//模块名字
+    name_en:"Dropdown", //英文模块名
+    mType:"toolconponent",
+    deps:{
+        css:null,//加载css依赖
+        js:null//
+    }, // 依赖
+    oprate:[], //可对其进行的属性操作
+    digest:"下拉菜单",//模块简介
+    view:"Dropdown" //模块视图
+});
+
+module.exports = Dropdown;

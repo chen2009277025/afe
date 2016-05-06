@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="test/js/lib/r.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <afespan data-module="Grid">
+            <div class="row clearfix">
+                <div class="col-md-12 afe-column">
+                    <afespan data-module="Head">
+                        <h3>
+                            h3. 这是一套可视化布局系统.
+                        </h3>
+                    </afespan>
+                    <afespan data-module="Grid">
+                        <div class="row clearfix">
+                            <div class="col-md-6 afe-column">
+                                <afespan data-module="Paragraph">
+                                    <p>
+                                        <em>Git</em> 是一个分布式的版本控制系统，最初由 <strong>Linus Torvalds</strong> 编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在 <small>Ruby</small> 社区中。
+                                    </p>
+                                </afespan>
+                            </div>
+                            <div class="col-md-6 afe-column">
+                                <afespan data-module="Paragraph">
+                                    <p>
+                                        <em>Git</em> 是一个分布式的版本控制系统，最初由 <strong>Linus Torvalds</strong> 编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在 <small>Ruby</small> 社区中。
+                                    </p>
+                                </afespan>
+                            </div>
+                        </div>
+                    </afespan>
+                </div>
+            </div>
+        </afespan>
+        <afespan data-module="Grid">
+            <div class="row clearfix">
+                <div class="col-md-12 afe-column">
+                    <afespan data-module="Grid">
+                        <div class="row clearfix">
+                            <div class="col-md-6 afe-column">
+                                <afespan data-module="Tab">
+                                    <div class="tabbable" id="tabs-517057">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active">
+                                                <a href="#panel-829935" data-toggle="tab">Section 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#panel-354734" data-toggle="tab">Section 2</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="panel-829935">
+                                                <p>
+                                                    I'm in Section 1.
+                                                </p>
+                                            </div>
+                                            <div class="tab-pane" id="panel-354734">
+                                                <p>
+                                                    Howdy, I'm in Section 2.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </afespan>
+                            </div>
+                            <div class="col-md-6 afe-column">
+                                <afespan data-module="Paragraph">
+                                    <p>
+                                        <em>Git</em> 是一个分布式的版本控制系统，最初由 <strong>Linus Torvalds</strong> 编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在 <small>Ruby</small> 社区中。
+                                    </p>
+                                </afespan>
+                            </div>
+                        </div>
+                    </afespan>
+                </div>
+            </div>
+        </afespan>
+    </div>
+</body>
+<script src="test/js/page/demo.js" type="text/javascript"></script>
+</html>

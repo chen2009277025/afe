@@ -1,0 +1,7 @@
+/**
+ * Created by chenjianhui on 16/4/28.
+ */
+
+var testModule = require("./TestModule.feclass");
+
+console.log(testModule.name_cn)

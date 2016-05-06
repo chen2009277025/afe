@@ -1,0 +1,13 @@
+/**
+ * Created by chenjianhui on 16/4/30.
+ */
+
+var setting = __dirname + "/../../../setting/setting";
+
+var librarypath = setting.projectDir+"/baseProject/css/";
+
+var CssUrlMap = {
+    "kangarooui":librarypath +"/kangarooui.min.css"//kui css
+}
+
+module.exports = CssUrlMap;

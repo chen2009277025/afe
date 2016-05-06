@@ -1,0 +1,28 @@
+<div style="display: none;" class="modal fade" id="renameModal" tabindex="-1" role="dialog"
+     aria-labelledby="newFileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal panel-body">
+                    <div class="form-group row">
+                        <label class="control-label col-md-2">名称</label>
+
+                        <div class="col-md-4">
+                            <input class="form-control fileName" name="name">
+                            <input class="form-control fileExt" name="fileExt" style="display: none">
+                            <input class="form-control oldFileName" name="oldFileName" style="display: none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-confirm btn-success" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

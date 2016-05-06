@@ -1,0 +1,221 @@
+/**
+ * Created by chenjianhui on 16/4/30.
+ * 项目管理类
+ *
+ * 主要负责项目的创建项目的读取等操作
+ */
+var baseDir = __dirname;
+var Class = require(baseDir + "/../../base/Class.feclass");
+const fs = require('fs');
+var setting = require(baseDir + "/../../../setting/setting");
+var fSManage = require(baseDir + "/../fs/FSManage.feclass");
+var workspaceDir = setting.workspace;
+
+var ProjectManager = Class.extend({
+    /***
+     * 创建项目
+     * @param projectName //项目名称
+     * 1成功 ,0失败,4已存在的项目
+     */
+    createProject: function (projectName) {
+        if(fs.existsSync(workspaceDir + projectName)){
+           return 4;
+        }
+        try{
+            fSManage.copyDir(setting.projectDir+"baseProject",setting.workspace);
+            fs.rename(setting.workspace+"baseProject",setting.workspace+projectName);
+        }catch(e){
+            console.log(e);
+            return 9;
+        }
+        return 1;
+    },
+    /***
+     * 删除项目
+     * @param projectName
+     * @returns {boolean} 1成功,0失败,3不存在的目录
+     */
+    deleteProject:function(projectName){
+        if(!fs.existsSync(workspaceDir + projectName)){
+            return 3;
+        }
+        try{
+            fSManage.removeFileOrDir(workspaceDir + projectName);
+        }catch(e){
+            console.log(e);
+            return 0;
+        }
+        return 1;
+    },
+    /***
+     * 重命名
+     * @param oldName
+     * @param newName
+     * @returns {number} 0失败,1成功,2已存在的目录,3:不存在的目录
+     */
+    renameFileOrDir:function(oldName,newName){
+       try{
+           if(!fs.existsSync(oldName)){
+               return 3;
+           }
+           if(fs.existsSync(newName)){
+               return 2;
+           }
+           fs.renameSync(oldName,newName);
+       }catch(e){
+           console.log(e);
+           return 9;
+       }
+        return 1;
+    },
+    /***
+     * 查找项目
+     * @param projectName
+     * @returns {number}
+     */
+    findProject:function(projectName){
+        if(!fs.existsSync(workspaceDir+projectName)){
+            return 0;
+        }
+        return 1;
+    },
+    /***
+     * 读取项目文件
+     * 此时需要在最外层加上项目的根文件夹
+     * @param projectName
+     * @returns {*}
+     */
+    readProjectFiles:function(projectName){
+
+        if(!fs.existsSync(workspaceDir+projectName)){
+            return [];
+        }
+
+        var files = fSManage.readDir(workspaceDir+projectName);
+        if(files != null && files.length >0){
+            var returnProject = {
+                type: "root",
+                name:projectName,
+                ext: "default",
+                children:files,
+                path:setting.workspace+projectName,
+                iconSkin:"project"
+            }
+            return returnProject;
+        }
+        return [];
+    },
+    /***
+     * 新建文件
+     * @param fileName
+     * @param fileType
+     * @param projectName
+     */
+    makeFile:function(fileName,fileType){
+        var resultJson = {};
+        var fileTemplate = "";
+        console.log(fileType);
+        //后缀名转化
+        switch(fileType){
+            case "0":
+                fileType = ".fhtml";
+                fileTemplate = baseDir+"/../../template/fhtmlTmplate";
+                break;
+            case "1":
+                fileType = ".js";
+                fileTemplate = baseDir+"/../../template/jsTemplate";
+                break;
+            case "2":
+                fileType = ".css";
+                break;
+            case "3":
+                fileType = ".txt";
+                break;
+        }
+
+        console.log(fileType);
+        if(fileTemplate){
+            var templateData = fSManage.readFile(fileTemplate);
+            resultJson.code = fSManage.writeFile(fileName+fileType,templateData);
+        }else{
+            resultJson.code = fSManage.makeFile(fileName+fileType);
+        }
+        if(resultJson.code == 1){
+            resultJson.msg = "新建文件成功";
+        }else if(resultJson.code == 0){
+            resultJson.msg = "已经存在的文件";
+        }else{
+            resultJson.msg = "未知错误";
+        }
+        return resultJson;
+    },
+    /***
+     * 新建文件夹
+     * @param fileName
+     */
+    makeDir:function(fileName){
+        var resultJson = {};
+        resultJson.code = fSManage.makeDir(fileName);
+        if(resultJson.code == 0){
+            resultJson.msg = "已经存在的文件夹";
+        }else if(resultJson.code == 1){
+            resultJson.msg = "新建成功";
+        }else{
+            resultJson.msg = "未知错误";
+        }
+        return resultJson;
+    },
+    /***
+     *删除文件或者目录
+     */
+    removeFileOrDir:function(fileName){
+        var resultJson = {};
+        resultJson.code = fSManage.removeFileOrDir(fileName);
+
+        if(resultJson.code == 0){
+            resultJson.msg = "目标文件(夹)不存在";
+        }else if(resultJson.code == 1){
+            resultJson.msg = "删除成功!";
+        }else{
+            resultJson.msg = "位置错误";
+        }
+        return resultJson;
+    },
+    /**
+     * 读取文件
+     * @param fileName
+     * @returns {{}}
+     */
+    readOneFile:function(fileName){
+        var resultJson = {};
+        var fileData = fSManage.readFile(fileName);
+        if(fileData != ""){
+            resultJson.code = 1;
+            resultJson.data = fileData;
+            resultJson.msg = "success";
+        }else{
+            resultJson.code = 0;
+            resultJson.msg = "读取文件错误";
+        }
+        return resultJson;
+    },
+    /**
+     * 写文件
+     * @param fileName
+     * @param fileData
+     * @returns {{}}
+     */
+    writeOneFile:function(fileName,fileData){
+        var resultJson = {};
+        resultJson.code = fSManage.writeFile(fileName,fileData);
+        if(resultJson.code == 1){
+            resultJson.msg = "success";
+        }else{
+            resultJson.msg = "读取文件错误";
+        }
+        return resultJson;
+
+    }
+});
+
+module.exports = new ProjectManager();

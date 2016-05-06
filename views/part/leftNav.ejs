@@ -1,0 +1,194 @@
+<div class="sidebar-nav main-menu left-component-bar">
+    <div class="text-right">
+        <i class="glyphicon glyphicon-menu-left componentBarBtn"></i>
+    </div>
+    <!--栅栏系统-->
+    <% include ./gridSystems.ejs %>
+
+    <!--基本css-->
+    <ul class="nav nav-list accordion-group">
+        <li class="nav-header">
+            <i class="glyphicon glyphicon-flag"></i>
+            基本CSS
+            <div class="pull-right popover-info">
+                <i class="glyphicon glyphicon-question-sign "></i>
+
+                <div class="popover fade right">
+                    <div class="arrow"></div>
+                    <h3 class="popover-title">帮助</h3>
+
+                    <div class="popover-content">
+                        将组件元素拖放入你需要放入的栅格列中。之后，你可以设置该元素的样式。如果你需要了解更多内容，请访问
+                        <a target="_blank" href="http://v3.bootcss.com/css/">基本CSS.</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="boxes" id="elmBase">
+            <% modules.baseCss.forEach(function(model){ %>
+            <div class="box box-element ui-draggable" data-module="<%= model.name_en %>">
+                <a href="#close" class="afe-removeBtn label label-danger">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+							</span>
+                     <span class="configuration">
+                         <% model.oprate.forEach(function(o){ %>
+                         <% if(typeof o.val == "string"){ %>
+                         <a class="btn btn-xs btn-default" href="#" rel="<%= o.val %>"><%= o.text %></a>
+                         <% }else{ %>
+                         <span class="btn-group btn-group-xs">
+									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <%= o.text %>
+                                        <span class="caret"></span>
+                                    </a>
+									<ul class="dropdown-menu">
+                                        <li class="active">
+                                            <a href="#" rel="">默认</a>
+                                        </li>
+                                        <% o.val.forEach(function(v){ %>
+                                        <li class=""><a href="#" rel="<%= v.val %>"><%= v.text %></a></li>
+                                        <% }) %>
+                                    </ul>
+                        </span>
+                         <% } %>
+                         <% }) %>
+                     </span>
+
+                <div class="afe-preview"><%= model.name_cn %></div>
+                <div class="afe-view">
+                    <afespan data-module="<%= model.name_en %>">
+                        <%- model.view %>
+                    </afespan>
+                </div>
+            </div>
+            <% }) %>
+        </li>
+    </ul>
+
+    <!--通用组件-->
+    <ul class="nav nav-list accordion-group">
+        <li class="nav-header">
+            <i class="glyphicon glyphicon-briefcase"></i>
+            工具组件
+            <div class="pull-right popover-info">
+                <i class="glyphicon glyphicon-question-sign "></i>
+
+                <div class="popover fade right">
+                    <div class="arrow"></div>
+                    <h3 class="popover-title">帮助</h3>
+
+                    <div class="popover-content">
+                        将组件元素拖放入你需要放入的栅格列中。之后，你可以设置该组件的样式。如果你需要了解更多内容，请访问
+                        <a target="_blank" href="http://v3.bootcss.com/components/">工具组件.</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="boxes" id="elmBase">
+            <% modules.toolconponent.forEach(function(model){ %>
+            <div class="box box-element ui-draggable" data-module="<%= model.name_en %>">
+                <a href="#close" class="afe-removeBtn label label-danger">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+							</span>
+                     <span class="configuration">
+                         <% model.oprate.forEach(function(o){ %>
+                         <% if(typeof o.val == "string"){ %>
+                         <a class="btn btn-xs btn-default" href="#" rel="<%= o.val %>"><%= o.text %></a>
+                         <% }else{ %>
+                         <span class="btn-group btn-group-xs">
+									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <%= o.text %>
+                                        <span class="caret"></span>
+                                    </a>
+									<ul class="dropdown-menu">
+                                        <li class="active">
+                                            <a href="#" rel="">默认</a>
+                                        </li>
+                                        <% o.val.forEach(function(v){ %>
+                                        <li class=""><a href="#" rel="<%= v.val %>"><%= v.text %></a></li>
+                                        <% }) %>
+                                    </ul>
+                        </span>
+                         <% } %>
+                         <% }) %>
+                     </span>
+
+                <div class="afe-preview"><%= model.name_cn %></div>
+                <div class="afe-view">
+                    <afespan data-module="<%= model.name_en %>">
+                        <%- model.view %>
+                    </afespan>
+                </div>
+            </div>
+            <% }) %>
+        </li>
+    </ul>
+
+    <ul class="nav nav-list accordion-group">
+        <li class="nav-header">
+            <i class="glyphicon glyphicon-plus"></i>
+            JavaScript
+            <div class="pull-right popover-info">
+                <i class="glyphicon glyphicon-question-sign "></i>
+
+                <div class="popover fade right">
+                    <div class="arrow"></div>
+                    <h3 class="popover-title">帮助</h3>
+
+                    <div class="popover-content">
+                        将组件元素拖放入你需要放入的栅格列中。之后，你可以设置该javascript组件的样式。如果你需要了解更多内容，请访问
+                        <a target="_blank" href="http://v3.bootcss.com/javascript/">JavaScript.</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="boxes" id="elmBase">
+            <% modules.javascript.forEach(function(model){ %>
+            <div class="box box-element ui-draggable" data-module="<%= model.name_en %>">
+                <a href="#close" class="afe-removeBtn label label-danger">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </a>
+							<span class="draghandler label label-default">
+								<i class="glyphicon glyphicon-move"></i>
+							</span>
+                     <span class="configuration">
+                         <% model.oprate.forEach(function(o){ %>
+                         <% if(typeof o.val == "string"){ %>
+                         <a class="btn btn-xs btn-default" href="#" rel="<%= o.val %>"><%= o.text %></a>
+                         <% }else{ %>
+                         <span class="btn-group btn-group-xs">
+									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <%= o.text %>
+                                        <span class="caret"></span>
+                                    </a>
+									<ul class="dropdown-menu">
+                                        <li class="active">
+                                            <a href="#" rel="">默认</a>
+                                        </li>
+                                        <% o.val.forEach(function(v){ %>
+                                        <li class=""><a href="#" rel="<%= v.val %>"><%= v.text %></a></li>
+                                        <% }) %>
+                                    </ul>
+                        </span>
+                         <% } %>
+                         <% }) %>
+                     </span>
+
+                <div class="afe-preview"><%= model.name_cn %></div>
+                <div class="afe-view">
+                    <afespan data-module="<%= model.name_en %>">
+                        <%- model.view %>
+                    </afespan>
+                </div>
+            </div>
+            <% }) %>
+        </li>
+    </ul>
+
+</div>

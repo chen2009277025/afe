@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>KUI-AFE - 基于KUI可视化布局系统</title>
+    <meta name="keywords" content="bootstrap,ibootstrap,可视化,操作,布局">
+    <meta name="description" content="KUI-AFE! 可拖放排序在线编辑的KUI可视化布局系统">
+
+    <!-- Le styles -->
+    <!--<link href="js/lib/bootstrap/dist/css/bootstrap.css" rel="style">-->
+    <link href="/css/kangarooui.min.css" rel="stylesheet">
+    <link href="/css/layoutit.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--<script src="js/lib/jquery/dist/jquery.min.js"></script>-->
+
+    <!--<script src="js/lib/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <!--<script src="js/scripts_bak.js"></script>-->
+    <script src="js/lib/r.js"></script>
+    <script type="text/javascript">
+        require.config({
+            baseUrl: '/js',
+            shim: {
+                'lib/jquery-ui': {
+                    deps: ['lib/jquery']
+                },
+                'lib/jquery.htmlClean': {
+                    deps: ['lib/jquery']
+                },
+                'lib/kangarooui.min': {
+                    deps: ['lib/jquery']
+                }
+            }
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+    <!--<script src="js/lib/kangarooui.min.js"></script>-->
+</head>
+
+<body style="min-height: 824px;" class="editView">
+<div class="navbar navbar-inverse navbar-fixed-top navbar-layoutit">
+    <div class="navbar-header">
+        <button data-target="navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+            <span class="glyphicon-bar"></span>
+            <span class="glyphicon-bar"></span>
+            <span class="glyphicon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="imgs/favicon.png">
+            KUI-AFE
+            <span class="label label-default">BETA</span>
+        </a>
+    </div>
+
+    <% include part/topToolBar.ejs %>
+
+    <!--/.navbar-collapse -->
+</div>
+<!--/.navbar-fixed-top -->
+
+<!--左边工具栏-->
+<div class="container">
+    <div class="row">
+        <div class="sidebar-nav main-menu">
+
+            <!--栅栏系统-->
+            <% include part/gridSystems.ejs %>
+
+            <!--基础css-->
+            <% include part/navbar/baseCss.ejs %>
+
+            <!--基础组件-->
+            <% include part/navbar/component_comm.ejs %>
+
+            <!--JavaScript组件-->
+            <% include part/navbar/JavaScript.ejs %>
+
+        </div>
+
+        <!--/span-->
+        <div style="min-height: 754px;" class="editor ui-sortable">
+
+        </div>
+
+        <!--/span-->
+        <div id="download-layout">
+            <div class="container">
+            </div>
+        </div>
+    </div>
+    <!--/row-->
+
+</div>
+<!--/.fluid-container-->
+
+
+<div style="display: none;" class="modal fade" id="downloadModal" tabindex="-1" role="dialog"
+     aria-labelledby="downloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">下载</h4>
+            </div>
+            <div class="modal-body">
+
+                <div id="download-logged" class="">
+                    <div class="alert alert-info">已在下面生成干净的HTML, 可以复制粘贴代码到你的body内<br>
+                        请使用bootstrap3.0.1,可在这里下载 <a target="_blank" href="http://www.bootcdn.cn/bootstrap/">http://www.bootcdn.cn/bootstrap</a>
+                    </div>
+                    <p>
+                        <textarea></textarea>
+                    </p>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+
+</div>
+
+<div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel"
+     aria-hidden="true"></div>
+<div style="display: none;" class="modal fade" id="feedbackModal" tabindex="-1" role="dialog"
+     aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">联系我们</h4>
+            </div>
+            <div class="modal-body">
+
+                <div id="download-logged" class="">
+                    <div class="alert alert-info">
+                        有任何问题，可邮件联系
+                        <a href="mailto:jaynaruto@qq.com">906341132@qq.com</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+/**
+ * Created by chenjianhui on 16/4/30.
+ */
+var baseDir = __dirname;
+var BaseModule = require(baseDir + "/../../base/Module.feclass");
+var StyleClassMap = require(baseDir + "/../../utils/style/StyleClassMap.feclass");
+
+var Button = BaseModule.extend({
+    name_cn:"按钮",//模块名字
+    name_en:"Button", //英文模块名
+    mType:"baseCss",
+    deps:{
+        css:null,//加载css依赖
+        js:null//
+    }, // 依赖
+    oprate:[StyleClassMap.btnStyle,StyleClassMap.btnSize,StyleClassMap.btnBlock,StyleClassMap.status], //可对其进行的属性操作
+    digest:"按钮",//模块简介
+    view:"Button" //模块视图
+});
+
+module.exports = Button;
